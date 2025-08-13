@@ -71,15 +71,15 @@ export default function SupplierPage() {
     loadDueSuppliers();
   };
 
-  const handleExport = async () => {
-    const res = await exportSuppliersExcel();
-    const url = window.URL.createObjectURL(new Blob([res.data]));
-    const link = document.createElement("a");
-    link.href = url;
-    link.setAttribute("download", "suppliers.xlsx");
-    document.body.appendChild(link);
-    link.click();
-  };
+  // const handleExport = async () => {
+  //   const res = await exportSuppliersExcel();
+  //   const url = window.URL.createObjectURL(new Blob([res.data]));
+  //   const link = document.createElement("a");
+  //   link.href = url;
+  //   link.setAttribute("download", "suppliers.xlsx");
+  //   document.body.appendChild(link);
+  //   link.click();
+  // };
 
   const handleDownloadTemplate = async () => {
     const res = await downloadSupplierTemplate();
